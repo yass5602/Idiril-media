@@ -1,340 +1,478 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- ✅ SEO : Title & Meta description -->
+<title>Idiril Media — Montage vidéo pour créateurs & médias | Reels, Shorts, TikTok</title>
+<meta name="description" content="Idiril Media, agence de montage vidéo spécialisée pour infopreneurs, créateurs de contenu et médias web. Reels viraux, sous-titres animés, stratégie éditoriale. +1,3M vues. Prenez rendez-vous.">
+ 
+<!-- ✅ SEO : Canonical & langue -->
+<link rel="canonical" href="https://idiril-media.vercel.app/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Rilès Iddir — Idiril Media">
+<meta name="keywords" content="montage vidéo, monteur vidéo freelance, montage reels instagram, montage tiktok, montage youtube shorts, sous-titres animés, stratégie éditoriale vidéo, monteur vidéo créateur de contenu, agence vidéo média, infopreneur vidéo, vidéo virale réseaux sociaux, montage vidéo france">
+ 
+<!-- ✅ SEO : Favicon -->
+<link rel="icon" href="assets/idiril-logo.webp" type="image/webp">
+<link rel="apple-touch-icon" href="assets/idiril-logo.webp">
+ 
+<!-- ✅ GEO : Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://idiril-media.vercel.app/">
+<meta property="og:title" content="Idiril Media — Montage vidéo pour créateurs & médias">
+<meta property="og:description" content="Reels viraux, sous-titres animés, stratégie éditoriale. Idiril Media transforme vos contenus bruts en formats qui performent. +1,3M vues pour nos clients.">
+<meta property="og:image" content="https://idiril-media.vercel.app/assets/logo-fond-blanc.webp">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Idiril Media">
+ 
+<!-- ✅ GEO : Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Idiril Media — Montage vidéo pour créateurs & médias">
+<meta name="twitter:description" content="Reels viraux, sous-titres animés, stratégie éditoriale. +1,3M vues pour nos clients médias et créateurs.">
+<meta name="twitter:image" content="https://idiril-media.vercel.app/assets/logo-fond-blanc.webp">
+ 
+<!-- ✅ GEO : Schema.org JSON-LD (LocalBusiness + Service) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Idiril Media",
+  "description": "Agence de montage vidéo spécialisée pour créateurs de contenu, infopreneurs et médias web. Reels, Shorts, TikTok, sous-titres animés, stratégie éditoriale.",
+  "url": "https://idiril-media.vercel.app/",
+  "logo": "https://idiril-media.vercel.app/assets/idiril-logo.webp",
+  "image": "https://idiril-media.vercel.app/assets/logo-fond-blanc.webp",
+  "telephone": "+33766577638",
+  "email": "rilesiddir.pro@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Rilès Iddir"
+  },
+  "serviceType": ["Montage vidéo", "Stratégie éditoriale", "Sous-titres animés", "Motion design", "Production de contenu réseaux sociaux"],
+  "areaServed": "FR",
+  "priceRange": "€€",
+  "sameAs": [
+    "https://www.instagram.com/idirilmedia",
+    "https://calendly.com/rilesiddir-pro"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "7"
+  }
+}
+</script>
+ 
 <script src="./support.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+ 
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: inherit; }
+  a { color: oklch(30% 0.10 275); text-decoration: none; }
+  a:hover { color: oklch(64% 0.16 300); }
+  @keyframes scrollX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+ 
+  /* ✅ RESPONSIVE MOBILE */
+ 
+  /* Nav mobile */
+  .nav-links { display: flex; align-items: center; gap: 36px; }
+  .nav-cta { display: inline-flex; }
+ 
+  @media (max-width: 768px) {
+    .nav-wrap { padding: 12px 20px !important; }
+    .nav-links { display: none; }
+    .nav-cta { font-size: 13px !important; padding: 9px 16px !important; }
+ 
+    /* Hero */
+    .hero-section { padding: 110px 20px 60px !important; gap: 40px !important; }
+    .hero-text { max-width: 100% !important; }
+    .hero-title { font-size: 32px !important; line-height: 1.2 !important; }
+    .hero-sub { font-size: 15px !important; }
+    .hero-video-wrap { width: 240px !important; height: 427px !important; }
+    .hero-btns { flex-direction: column !important; }
+    .hero-btns a { width: 100% !important; justify-content: center !important; }
+ 
+    /* CTA banners */
+    .cta-banner { padding: 48px 20px !important; }
+    .cta-banner-title { font-size: 20px !important; }
+ 
+    /* Avis */
+    .avis-section { padding: 60px 0 !important; }
+    .avis-header { padding: 0 20px !important; margin-bottom: 36px !important; }
+    .avis-title { font-size: 24px !important; }
+ 
+    /* Résultats */
+    .resultats-section { padding: 60px 20px !important; }
+    .resultats-title { font-size: 24px !important; }
+    .resultats-cards { gap: 20px !important; }
+    .resultats-card { width: 100% !important; max-width: 100% !important; }
+    .client-block { flex-direction: column !important; align-items: flex-start !important; }
+    .client-logo-wrap { width: 120px !important; height: 44px !important; }
+    .reels-grid { gap: 16px !important; }
+    .reel-card { width: calc(100vw - 40px) !important; max-width: 340px !important; }
+ 
+    /* Offres */
+    .offres-section { padding: 60px 20px !important; }
+    .offres-title { font-size: 24px !important; }
+    .offres-grid { gap: 20px !important; }
+    .offre-card { width: 100% !important; max-width: 100% !important; }
+ 
+    /* Footer */
+    .footer-wrap { padding: 60px 20px 32px !important; }
+    .footer-inner { flex-direction: column !important; gap: 32px !important; }
+    .footer-logo { height: 120px !important; width: 180px !important; }
+    .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; padding: 0 20px !important; }
+    .footer-legal { flex-direction: column !important; gap: 8px !important; }
+  }
+ 
+  @media (max-width: 480px) {
+    .hero-title { font-size: 26px !important; }
+    .hero-video-wrap { width: 200px !important; height: 356px !important; }
+  }
+</style>
 </head>
 <body>
-<x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="./image-slot.js"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; box-sizing: border-box; }
-    *, *::before, *::after { box-sizing: inherit; }
-    a { color: oklch(30% 0.10 275); text-decoration: none; }
-    a:hover { color: oklch(64% 0.16 300); }
-    @keyframes scrollX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  </style>
-</helmet>
-
 <div style="font-family:'Public Sans',sans-serif;color:oklch(22% 0.03 285);background:oklch(98% 0.008 290);overflow-x:hidden">
-
-  <div style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(98% 0.008 290 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(90% 0.012 290)">
-    <a href="#hero" style="display:flex;align-items:center">
-      <img src="assets/idiril-logo.webp" alt="Idiril Media" style="height:34px;width:auto;display:block" decoding="async" />
-    </a>
-    <div style="display:flex;align-items:center;gap:36px">
-      <a href="#avis" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)" style-hover="color:oklch(64% 0.16 300)">Avis</a>
-      <a href="#resultats" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)" style-hover="color:oklch(64% 0.16 300)">Résultats</a>
-      <a href="#offres" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)" style-hover="color:oklch(64% 0.16 300)">Offres</a>
-      <a href="#contact" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)" style-hover="color:oklch(64% 0.16 300)">Contact</a>
-    </div>
-    <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:11px 22px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 14px 'Sora',sans-serif" style-hover="transform:translateY(-2px)">Discutons de votre projet</a>
-  </div>
-
-  <section id="hero" style="padding:180px 48px 100px;display:flex;align-items:center;justify-content:center;gap:64px;flex-wrap:wrap;background:radial-gradient(circle at 80% 10%, oklch(90% 0.05 300 / 0.5), transparent 60%)">
-    <div style="max-width:560px;display:flex;flex-direction:column;gap:24px">
-      <div style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300)">MONTAGE VIDÉO POUR CRÉATEURS &amp; MÉDIAS</div>
-      <h1 style="font:800 48px/1.15 'Sora',sans-serif;margin:0;text-wrap:pretty">Des vidéos qui captent l'attention et font grandir votre audience.</h1>
-      <p style="font:500 17px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0;text-wrap:pretty">Montage rythmé, sous-titres animés, stratégie éditoriale : Idiril Media transforme vos contenus bruts en formats qui performent sur les réseaux sociaux.</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
-        <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 16px 'Sora',sans-serif;box-shadow:0 12px 28px oklch(30% 0.10 275 / 0.28)" style-hover="transform:translateY(-2px)">Discutons de votre projet</a>
-        <a href="#resultats" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;border:1.5px solid oklch(30% 0.10 275);color:oklch(30% 0.10 275);font:700 16px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Voir les résultats</a>
+ 
+  <!-- NAV -->
+  <header>
+    <nav aria-label="Navigation principale" class="nav-wrap" style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(98% 0.008 290 / 0.85);backdrop-filter:blur(12px);border-bottom:1px solid oklch(90% 0.012 290)">
+      <a href="#hero" aria-label="Idiril Media — Accueil" style="display:flex;align-items:center">
+        <img src="assets/idiril-logo.webp" alt="Logo Idiril Media — agence montage vidéo" style="height:34px;width:auto;display:block" decoding="async" />
+      </a>
+      <div class="nav-links">
+        <a href="#avis" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Avis clients</a>
+        <a href="#resultats" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Résultats</a>
+        <a href="#offres" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Offres</a>
+        <a href="#contact" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Contact</a>
       </div>
-    </div>
-      <div style="width:300px;height:533px;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px oklch(20% 0.03 285 / 0.2);border:8px solid oklch(20% 0.03 285)">
-        <iframe 
-          src="https://youtube.com/embed/kmFrvYsfn-k?feature=share"
+      <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" class="nav-cta" style="display:inline-flex;align-items:center;padding:11px 22px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 14px 'Sora',sans-serif">Réserver un appel gratuit</a>
+    </nav>
+  </header>
+ 
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero-section" aria-label="Présentation Idiril Media" style="padding:180px 48px 100px;display:flex;align-items:center;justify-content:center;gap:64px;flex-wrap:wrap;background:radial-gradient(circle at 80% 10%, oklch(90% 0.05 300 / 0.5), transparent 60%)">
+      <div class="hero-text" style="max-width:560px;display:flex;flex-direction:column;gap:24px">
+        <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0">MONTAGE VIDÉO POUR CRÉATEURS & MÉDIAS WEB</p>
+        <h1 class="hero-title" style="font:800 48px/1.15 'Sora',sans-serif;margin:0;text-wrap:pretty">Des vidéos qui captent l'attention et font grandir votre audience.</h1>
+        <p class="hero-sub" style="font:500 17px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0;text-wrap:pretty">Montage rythmé, sous-titres animés, stratégie éditoriale vidéo : Idiril Media transforme vos contenus bruts en Reels, Shorts et TikToks qui performent sur les réseaux sociaux — et font exploser votre audience.</p>
+        <div class="hero-btns" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
+          <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 16px 'Sora',sans-serif;box-shadow:0 12px 28px oklch(30% 0.10 275 / 0.28)">Réserver un appel stratégique gratuit</a>
+          <a href="#resultats" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;border:1.5px solid oklch(30% 0.10 275);color:oklch(30% 0.10 275);font:700 16px 'Sora',sans-serif">Voir nos résultats clients</a>
+        </div>
+      </div>
+      <div class="hero-video-wrap" style="width:300px;height:533px;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px oklch(20% 0.03 285 / 0.2);border:8px solid oklch(20% 0.03 285)">
+        <iframe
+          src="https://www.youtube.com/embed/kmFrvYsfn-k?autoplay=1&mute=1&loop=1&controls=0&playlist=kmFrvYsfn-k"
           style="width:100%;height:100%;border:none;display:block"
           allow="autoplay; fullscreen"
           allowfullscreen
-          ></iframe>
+          title="Témoignage client Idiril Media — montage vidéo"
+          loading="lazy"
+        ></iframe>
       </div>
-  </section>
-
-  <div style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
-    <div style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty">Prêt à transformer vos vidéos en machine à vues ?</div>
-    <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-  </div>
-
-  <section id="avis" style="padding:100px 0">
-    <div style="text-align:center;max-width:640px;margin:0 auto 56px;padding:0 48px">
-      <div style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin-bottom:12px">ILS NOUS FONT CONFIANCE</div>
-      <h2 style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Des créateurs et médias qui voient déjà les résultats</h2>
+    </section>
+ 
+    <!-- CTA BANNER 1 -->
+    <div class="cta-banner" style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <p class="cta-banner-title" style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty;margin:0">Prêt à transformer vos vidéos en machine à vues ?</p>
+      <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Réserver un appel gratuit</a>
     </div>
-    <div style="overflow:hidden;width:100%">
-      <div style="display:flex;gap:24px;width:max-content;animation:scrollX 60s linear infinite;padding:0 48px" style-hover="animation-play-state:paused">
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/le-mediapositif.webp" alt="Le Média Positif" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Positif</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Notre format "anniv" a dépassé 1,3M de vues avec 5,88% d'engagement. Rilès a transformé nos réels en machine à vues. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/whoswho_upscaled.webp" alt="Who's Who France" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Who's Who France</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un montage rythmé et une écoute précise de notre ligne édito. Le retour sur investissement est immédiat. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/strategies.webp" alt="Stratégies Live" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Stratégies Live</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« En quelques semaines, nos réseaux sont repartis de zéro à 612k vues sur un seul format. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/lemediaexperience.webp" alt="Le Média Expérience" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Expérience</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Rilès a posé une vraie stratégie éditoriale avec un suivi mensuel des performances. Rigoureux et réactif. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(30% 0.01 285);display:flex;align-items:center;justify-content:center"><img src="assets/client/Christopher-wangen.webp" alt="Christopher Wangen" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Christopher Wangen</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un taux de rétention de 65% sur mes reels, du jamais vu pour mon contenu. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/Maddyness.webp" alt="Maddyness" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Maddyness</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« 4h gagnées par vidéo, sans jamais sacrifier la qualité du rendu. Un vrai gain de temps pour l'équipe. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(88% 0.16 95);display:flex;align-items:center;justify-content:center"><img src="assets/client/authenticcreators-upscale.webp" alt="Authentic Creators" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Authentic Creators</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un vrai partenaire créatif : montages percutants livrés dans les temps, à chaque fois. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/le-mediapositif.webp" alt="Le Média Positif" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Positif</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Notre format "anniv" a dépassé 1,3M de vues avec 5,88% d'engagement. Rilès a transformé nos réels en machine à vues. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/whoswho_upscaled.webp" alt="Who's Who France" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Who's Who France</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un montage rythmé et une écoute précise de notre ligne édito. Le retour sur investissement est immédiat. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/strategies.webp" alt="Stratégies Live" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Stratégies Live</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« En quelques semaines, nos réseaux sont repartis de zéro à 612k vues sur un seul format. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/lemediaexperience.webp" alt="Le Média Expérience" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Expérience</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Rilès a posé une vraie stratégie éditoriale avec un suivi mensuel des performances. Rigoureux et réactif. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(30% 0.01 285);display:flex;align-items:center;justify-content:center"><img src="assets/client/Christopher-wangen.webp" alt="Christopher Wangen" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Christopher Wangen</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un taux de rétention de 65% sur mes reels, du jamais vu pour mon contenu. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/Maddyness.webp" alt="Maddyness" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Maddyness</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« 4h gagnées par vidéo, sans jamais sacrifier la qualité du rendu. Un vrai gain de temps pour l'équipe. »</div>
-        </div>
-        <div style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(88% 0.16 95);display:flex;align-items:center;justify-content:center"><img src="assets/client/authenticcreators-upscale.webp" alt="Authentic Creators" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Authentic Creators</div></div>
-          <div style="font:500 15px/1.6 'Public Sans',sans-serif">« Un vrai partenaire créatif : montages percutants livrés dans les temps, à chaque fois. »</div>
-        </div>
-
+ 
+    <!-- AVIS CLIENTS -->
+    <section id="avis" class="avis-section" aria-label="Avis clients" style="padding:100px 0">
+      <div class="avis-header" style="text-align:center;max-width:640px;margin:0 auto 56px;padding:0 48px">
+        <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0 0 12px">ILS NOUS FONT CONFIANCE</p>
+        <h2 class="avis-title" style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Des créateurs, infopreneurs et médias qui voient déjà les résultats</h2>
       </div>
+      <div style="overflow:hidden;width:100%">
+        <div style="display:flex;gap:24px;width:max-content;animation:scrollX 60s linear infinite;padding:0 48px">
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/le-mediapositif.webp" alt="Logo Le Média Positif" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Positif</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Notre format "anniv" a dépassé 1,3M de vues avec 5,88% d'engagement. Rilès a transformé nos réels en machine à vues. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/whoswho_upscaled.webp" alt="Logo Who's Who France" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Who's Who France</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un montage rythmé et une écoute précise de notre ligne éditoriale. Le retour sur investissement est immédiat. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/strategies.webp" alt="Logo Stratégies Live" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Stratégies Live</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« En quelques semaines, notre compte est passé de zéro à 612k vues sur un seul format vidéo. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/lemediaexperience.webp" alt="Logo Le Média Expérience" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Expérience</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Rilès a mis en place une vraie stratégie éditoriale vidéo avec un suivi mensuel des performances. Rigoureux et réactif. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(30% 0.01 285);display:flex;align-items:center;justify-content:center"><img src="assets/client/Christopher-wangen.webp" alt="Photo Christopher Wangen — infopreneur" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Christopher Wangen</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un taux de rétention de 65% sur mes Reels, du jamais vu pour mon contenu. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/Maddyness.webp" alt="Logo Maddyness" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Maddyness</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« 4h gagnées par vidéo, sans jamais sacrifier la qualité du rendu. Un vrai gain de temps pour notre équipe de rédaction. »</blockquote>
+          </article>
+ 
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(88% 0.16 95);display:flex;align-items:center;justify-content:center"><img src="assets/client/authenticcreators-upscale.webp" alt="Logo Authentic Creators" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Authentic Creators</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un vrai partenaire créatif pour créateurs de contenu : montages percutants livrés dans les temps, à chaque fois. »</blockquote>
+          </article>
+ 
+          <!-- Doublons pour l'effet défilement infini -->
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/le-mediapositif.webp" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Le Média Positif</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Notre format "anniv" a dépassé 1,3M de vues avec 5,88% d'engagement. Rilès a transformé nos réels en machine à vues. »</blockquote>
+          </article>
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/whoswho_upscaled.webp" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Who's Who France</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un montage rythmé et une écoute précise de notre ligne éditoriale. Le retour sur investissement est immédiat. »</blockquote>
+          </article>
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center"><img src="assets/client/strategies.webp" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Stratégies Live</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« En quelques semaines, notre compte est passé de zéro à 612k vues sur un seul format vidéo. »</blockquote>
+          </article>
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(30% 0.01 285);display:flex;align-items:center;justify-content:center"><img src="assets/client/Christopher-wangen.webp" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Christopher Wangen</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un taux de rétention de 65% sur mes Reels, du jamais vu pour mon contenu. »</blockquote>
+          </article>
+          <article style="width:340px;flex-shrink:0;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+            <div style="display:flex;align-items:center;gap:14px"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:oklch(88% 0.16 95);display:flex;align-items:center;justify-content:center"><img src="assets/client/authenticcreators-upscale.webp" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" /></div><div style="font:700 15px 'Sora',sans-serif">Authentic Creators</div></div>
+            <blockquote style="font:500 15px/1.6 'Public Sans',sans-serif;margin:0">« Un vrai partenaire créatif pour créateurs de contenu : montages percutants livrés dans les temps, à chaque fois. »</blockquote>
+          </article>
+ 
+        </div>
+      </div>
+    </section>
+ 
+    <!-- CTA BANNER 2 -->
+    <div class="cta-banner" style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <p class="cta-banner-title" style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty;margin:0">Envie des mêmes résultats pour votre média ou votre personal brand ?</p>
+      <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Planifier un appel stratégique</a>
     </div>
-  </section>
-
-  <div style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
-    <div style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty">Envie des mêmes résultats pour votre marque ?</div>
-    <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-  </div>
-
-  <section id="resultats" style="padding:100px 48px;background:oklch(95% 0.012 290)">
-    <div style="text-align:center;max-width:640px;margin:0 auto 64px">
-      <div style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin-bottom:12px">RÉSULTATS</div>
-      <h2 style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Une croissance mesurable, mois après mois</h2>
-    </div>
-
-    <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:88px">
-      <div style="background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:32px;width:380px">
-        <div style="font:700 16px 'Sora',sans-serif;margin-bottom:24px">Total des vues / mois</div>
-        <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:24px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Oct.</div></div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:92px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Nov.</div></div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:160px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Déc.</div></div>
-        </div>
-        <div style="text-align:center;margin-top:16px;font:700 18px 'Sora',sans-serif;color:oklch(30% 0.10 275)">12,5M vues en décembre</div>
+ 
+    <!-- RÉSULTATS -->
+    <section id="resultats" class="resultats-section" aria-label="Résultats clients" style="padding:100px 48px;background:oklch(95% 0.012 290)">
+      <div style="text-align:center;max-width:640px;margin:0 auto 64px">
+        <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0 0 12px">RÉSULTATS PROUVÉS</p>
+        <h2 class="resultats-title" style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Une croissance mesurable, mois après mois</h2>
       </div>
-      <div style="background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:32px;width:380px">
-        <div style="font:700 16px 'Sora',sans-serif;margin-bottom:24px">Total de l'engagement / mois</div>
-        <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:28px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Oct.</div></div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:92px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Nov.</div></div>
-          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:160px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Déc.</div></div>
+ 
+      <div class="resultats-cards" style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:88px">
+        <div class="resultats-card" style="background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:32px;width:380px">
+          <h3 style="font:700 16px 'Sora',sans-serif;margin:0 0 24px">Total des vues / mois</h3>
+          <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:24px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Oct.</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:92px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Nov.</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:160px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Déc.</div></div>
+          </div>
+          <p style="text-align:center;margin:16px 0 0;font:700 18px 'Sora',sans-serif;color:oklch(30% 0.10 275)">12,5M vues en décembre</p>
         </div>
-        <div style="text-align:center;margin-top:16px;font:700 18px 'Sora',sans-serif;color:oklch(30% 0.10 275)">400k interactions en décembre</div>
-      </div>
-    </div>
-
-    <div style="max-width:1180px;margin:0 auto 80px">
-      <div style="display:flex;align-items:center;gap:20px;margin-bottom:32px">
-        <div style="width:160px;height:56px;flex-shrink:0">
-          <image-slot id="logo-client-1" fit="contain" src="./assets/client/le-mediapositif.webp"></image-slot>
-        </div>
-        <div>
-          <div style="font:700 20px 'Sora',sans-serif">Le Média Positif — Groupe</div>
-          <div style="font:500 14px/1.5 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Contenu à fort taux de rétention pour le groupe média français indépendant à la plus forte croissance.</div>
+        <div class="resultats-card" style="background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:32px;width:380px">
+          <h3 style="font:700 16px 'Sora',sans-serif;margin:0 0 24px">Total de l'engagement / mois</h3>
+          <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:28px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Oct.</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:92px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Nov.</div></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:56px;height:160px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div><div style="font:600 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Déc.</div></div>
+          </div>
+          <p style="text-align:center;margin:16px 0 0;font:700 18px 'Sora',sans-serif;color:oklch(30% 0.10 275)">400k interactions en décembre</p>
         </div>
       </div>
-      <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DOJjz2HCGPA/embed" style="width:100%;height:100%;border:0" loading="lazy" title="LMP mexique anniv"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">1,3M</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,88%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+ 
+      <div style="max-width:1180px;margin:0 auto">
+        <div class="client-block" style="display:flex;align-items:center;gap:20px;margin-bottom:32px">
+          <div class="client-logo-wrap" style="width:160px;height:56px;flex-shrink:0">
+            <image-slot id="logo-client-1" fit="contain" src="./assets/client/le-mediapositif.webp"></image-slot>
+          </div>
+          <div>
+            <h3 style="font:700 20px 'Sora',sans-serif;margin:0 0 4px">Le Média Positif — Groupe</h3>
+            <p style="font:500 14px/1.5 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Contenu vidéo à fort taux de rétention pour le groupe média français indépendant à la plus forte croissance sur les réseaux sociaux.</p>
           </div>
         </div>
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DPCDjpPDj6-/embed" style="width:100%;height:100%;border:0" loading="lazy" title="LME italiens"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">340k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">3h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+        <div class="reels-grid" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DOJjz2HCGPA/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Positif — format anniversaire 1,3M vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">1,3M</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,88%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
           </div>
-        </div>
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQhXT3hiFKW/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Whoswho MJ Perec"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">42,3k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,4%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DPCDjpPDj6-/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Expérience — 340k vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">340k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">3h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:64px">
-      <div style="display:flex;align-items:center;gap:20px;margin-bottom:32px">
-        <div style="width:160px;height:56px;flex-shrink:0"><image-slot fit="contain" src="./assets/client/strategies.webp"></image-slot></div>
-        <div>
-          <div style="font:700 20px 'Sora',sans-serif">StrategiesLive</div>
-          <div style="font:500 14px/1.5 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Résurrection des réseaux sociaux du magazine marketing français n°1. Mise en place en équipe de la stratégie éditoriale et suivi mensuel des performances depuis le 20 octobre 2025.</div>
-        </div>
-      </div>
-      <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQ6bPNgAU8m/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Stratégies Live 1"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">184k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,71%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">3h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
-          </div>
-        </div>
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DSK1m6NjTVm/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Stratégies Live 2"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">612k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">65%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">rétention</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
-          </div>
-        </div>
-        <div style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-          <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQmapRRiJzJ/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Stratégies Live 3"></iframe></div>
-          <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">110k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
-            <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQhXT3hiFKW/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Who's Who France — 42k vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">42,3k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,4%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <div style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
-    <div style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty">Voyons comment démultiplier vos performances.</div>
-    <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-  </div>
-
-  <section id="offres" style="padding:100px 48px;background:oklch(98% 0.008 290)">
-    <div style="text-align:center;max-width:640px;margin:0 auto 64px">
-      <div style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin-bottom:12px">OFFRES</div>
-      <h2 style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Une formule pour chaque étape de votre croissance</h2>
-    </div>
-
-    <div style="display:flex;gap:28px;flex-wrap:wrap;justify-content:center;align-items:stretch;max-width:1180px;margin:0 auto">
-
-      <div style="width:340px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px">
-        <div style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(45% 0.13 300)">OPTION 1</div>
-        <div style="font:800 22px 'Sora',sans-serif">Offre Décollage</div>
-        <div style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Pour les créateurs et entreprises qui se lancent, cherchent à tester un format vidéo à moindre coût et veulent un montage propre sans fioritures.</div>
-        <div style="display:flex;flex-direction:column;gap:10px;flex:1">
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Montage rythmé &amp; cuts professionnels</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sous-titres animés calés sur la voix</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Habillage musical adapté au ton</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Format vertical 9:16 optimisé réseaux</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Idéal pour tester un format ou démarrer</div>
+ 
+      <div style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:64px">
+        <div class="client-block" style="display:flex;align-items:center;gap:20px;margin-bottom:32px">
+          <div class="client-logo-wrap" style="width:160px;height:56px;flex-shrink:0"><image-slot fit="contain" src="./assets/client/strategies.webp"></image-slot></div>
+          <div>
+            <h3 style="font:700 20px 'Sora',sans-serif;margin:0 0 4px">Stratégies Live</h3>
+            <p style="font:500 14px/1.5 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Résurrection des réseaux sociaux du magazine marketing & communication français n°1. Stratégie éditoriale et suivi mensuel des performances depuis le 20 octobre 2025.</p>
+          </div>
         </div>
-        <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;border:1.5px solid oklch(30% 0.10 275);color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-      </div>
-
-      <div style="width:340px;background:oklch(99% 0.004 290);border:2px solid oklch(64% 0.16 300);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px;position:relative;box-shadow:0 20px 40px oklch(30% 0.10 275 / 0.12)">
-        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 12px 'Sora',sans-serif;padding:6px 16px;border-radius:999px">LE PLUS CHOISI</div>
-        <div style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(45% 0.13 300)">OPTION 2</div>
-        <div style="font:800 22px 'Sora',sans-serif">Offre Ascension</div>
-        <div style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Pour les créateurs déjà établis qui veulent exploser leur taux de rétention, faire décoller leur visibilité et offrir un contenu ultra-dynamique à leur audience.</div>
-        <div style="display:flex;flex-direction:column;gap:10px;flex:1">
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Hook visuel percutant (3 premières secondes)</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Zooms &amp; reframings dynamiques</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Motion design texte &amp; animations</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sound design pro</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sous-titres animés style Reels</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Intégration B-roll</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Cadrage</div>
+        <div class="reels-grid" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQ6bPNgAU8m/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 184k vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">184k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,71%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">3h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
+          </div>
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DSK1m6NjTVm/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 612k vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">612k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">65%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">rétention</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
+          </div>
+          <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQmapRRiJzJ/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 110k vues"></iframe></div>
+            <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">110k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
+              <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4h</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">gagnées</div></div>
+            </div>
+          </div>
         </div>
-        <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 15px 'Sora',sans-serif" style-hover="transform:translateY(-2px)">Discutons de votre projet</a>
       </div>
-
-      <div style="width:340px;background:oklch(30% 0.10 275);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px;color:white">
-        <div style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(80% 0.08 300)">OPTION 3</div>
-        <div style="font:800 22px 'Sora',sans-serif">Offre Orbite</div>
-        <div style="font:600 13px 'Public Sans',sans-serif;color:oklch(85% 0.04 300)">Stratégie &amp; production complète</div>
-        <div style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(88% 0.02 290 / 0.85)">Pour les médias en ligne et entreprises matures qui cherchent un partenariat long terme, une délégation totale de leur production et un pilotage par la performance.</div>
-        <div style="display:flex;flex-direction:column;gap:10px;flex:1">
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Nombre de vidéos défini ensemble</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Tous formats disponibles (Shorts, Reels, TikTok)</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>A/B Testing</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Rapports de performances &amp; optimisation des contenus</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Réactivité &amp; disponibilité prioritaires</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Budget mensuel prévisible</div>
-          <div style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Cadrage</div>
+    </section>
+ 
+    <!-- CTA BANNER 3 -->
+    <div class="cta-banner" style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <p class="cta-banner-title" style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty;margin:0">Voyons comment démultiplier vos performances vidéo.</p>
+      <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Obtenir un audit gratuit</a>
+    </div>
+ 
+    <!-- OFFRES -->
+    <section id="offres" class="offres-section" aria-label="Offres et tarifs" style="padding:100px 48px;background:oklch(98% 0.008 290)">
+      <div style="text-align:center;max-width:640px;margin:0 auto 64px">
+        <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0 0 12px">OFFRES & TARIFS</p>
+        <h2 class="offres-title" style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Une formule de montage vidéo pour chaque étape de votre croissance</h2>
+      </div>
+ 
+      <div class="offres-grid" style="display:flex;gap:28px;flex-wrap:wrap;justify-content:center;align-items:stretch;max-width:1180px;margin:0 auto">
+ 
+        <article class="offre-card" style="width:340px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px">
+          <p style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(45% 0.13 300);margin:0">OPTION 1</p>
+          <h3 style="font:800 22px 'Sora',sans-serif;margin:0">Offre Décollage</h3>
+          <p style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Pour les créateurs et infopreneurs qui démarrent, veulent tester un format vidéo à moindre coût et obtenir un montage professionnel sans fioritures.</p>
+          <ul style="display:flex;flex-direction:column;gap:10px;flex:1;list-style:none;padding:0;margin:0">
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Montage rythmé & cuts professionnels</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sous-titres animés calés sur la voix</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Habillage musical adapté au ton</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Format vertical 9:16 optimisé réseaux sociaux</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Idéal pour tester un format ou démarrer</li>
+          </ul>
+          <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;border:1.5px solid oklch(30% 0.10 275);color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Découvrir l'offre Décollage</a>
+        </article>
+ 
+        <article class="offre-card" style="width:340px;background:oklch(99% 0.004 290);border:2px solid oklch(64% 0.16 300);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px;position:relative;box-shadow:0 20px 40px oklch(30% 0.10 275 / 0.12)">
+          <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 12px 'Sora',sans-serif;padding:6px 16px;border-radius:999px;white-space:nowrap">LE PLUS CHOISI</div>
+          <p style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(45% 0.13 300);margin:0">OPTION 2</p>
+          <h3 style="font:800 22px 'Sora',sans-serif;margin:0">Offre Ascension</h3>
+          <p style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Pour les créateurs de contenu et médias web déjà établis qui veulent exploser leur taux de rétention et offrir un contenu ultra-dynamique à leur audience.</p>
+          <ul style="display:flex;flex-direction:column;gap:10px;flex:1;list-style:none;padding:0;margin:0">
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Hook visuel percutant (3 premières secondes)</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Zooms & reframings dynamiques</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Motion design texte & animations</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sound design professionnel</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Sous-titres animés style Reels</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Intégration B-roll</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(64% 0.16 300);font-weight:700">✓</span>Cadrage & recadrage</li>
+          </ul>
+          <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 15px 'Sora',sans-serif">Choisir l'offre Ascension</a>
+        </article>
+ 
+        <article class="offre-card" style="width:340px;background:oklch(30% 0.10 275);border-radius:24px;padding:36px;display:flex;flex-direction:column;gap:20px;color:white">
+          <p style="font:700 12px 'Sora',sans-serif;letter-spacing:0.1em;color:oklch(80% 0.08 300);margin:0">OPTION 3</p>
+          <h3 style="font:800 22px 'Sora',sans-serif;margin:0;color:white">Offre Orbite</h3>
+          <p style="font:600 13px 'Public Sans',sans-serif;color:oklch(85% 0.04 300);margin:0">Stratégie éditoriale & production vidéo complète</p>
+          <p style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(88% 0.02 290 / 0.85);margin:0">Pour les médias en ligne et entreprises qui cherchent un partenariat long terme, une délégation totale de leur production vidéo et un pilotage par la performance.</p>
+          <ul style="display:flex;flex-direction:column;gap:10px;flex:1;list-style:none;padding:0;margin:0">
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Nombre de vidéos défini ensemble</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Tous formats disponibles (Shorts, Reels, TikTok)</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>A/B Testing des formats</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Rapports de performances & optimisation des contenus</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Réactivité & disponibilité prioritaires</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Budget mensuel prévisible</li>
+            <li style="display:flex;gap:10px;font:500 14px/1.5 'Public Sans',sans-serif"><span style="color:oklch(80% 0.08 300);font-weight:700">✓</span>Cadrage & recadrage inclus</li>
+          </ul>
+          <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Discuter de l'offre Orbite</a>
+        </article>
+ 
+      </div>
+    </section>
+ 
+    <!-- CTA BANNER 4 -->
+    <div class="cta-banner" style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
+      <p class="cta-banner-title" style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty;margin:0">Réservons un créneau pour définir votre stratégie vidéo.</p>
+      <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif">Prendre rendez-vous gratuitement</a>
+    </div>
+ 
+  </main>
+ 
+  <!-- FOOTER -->
+  <footer id="contact" class="footer-wrap" style="background:oklch(96% 0.012 290);padding:80px 48px 40px">
+    <div style="max-width:1180px;margin:0 auto;padding-bottom:48px">
+      <div class="footer-inner" style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap">
+        <div style="max-width:320px;display:flex;flex-direction:column;gap:16px">
+          <img class="footer-logo" src="assets/logo-fond-blanc.webp" alt="Logo Idiril Media — agence montage vidéo pour créateurs et médias" style="height:200px;width:300px;object-fit:contain" loading="lazy" decoding="async" />
+          <p style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Montage vidéo pour créateurs de contenu, infopreneurs et médias web qui veulent des formats qui performent sur les réseaux sociaux.</p>
         </div>
-        <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-      </div>
-
-    </div>
-  </section>
-
-  <div style="padding:64px 48px;background:oklch(30% 0.10 275);display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center">
-    <div style="font:700 26px/1.3 'Sora',sans-serif;color:white;max-width:600px;text-wrap:pretty">Réservons un créneau pour en discuter.</div>
-    <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;background:white;color:oklch(30% 0.10 275);font:700 15px 'Sora',sans-serif" style-hover="background:oklch(94% 0.02 290)">Discutons de votre projet</a>
-  </div>
-
-  <footer id="contact" style="background:oklch(96% 0.012 290);padding:80px 48px 40px">
-    <div style="max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;padding-bottom:48px">
-      <div style="max-width:320px;display:flex;flex-direction:column;gap:16px">
-        <img src="assets/idiril-logo.webp" alt="Idiril Media" style="height:200px;width:300px" object-fit="contain" loading="lazy" decoding="async" />
-        <div style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Montage vidéo pour créateurs et médias qui veulent des formats qui performent.</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="font:700 14px 'Sora',sans-serif;margin-bottom:4px">Contact</div>
-        <a href="tel:+33766577638" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">07 66 57 76 38</a>
-        <a href="mailto:rilesiddir.pro@gmail.com" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">rilesiddir.pro@gmail.com</a>
-        <a href="https://calendly.com/rilesiddir-pro" target="_blank" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Prendre rendez-vous</a>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="font:700 14px 'Sora',sans-serif;margin-bottom:4px">Navigation</div>
-        <a href="#avis" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Avis</a>
-        <a href="#resultats" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Résultats</a>
-        <a href="#offres" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Offres</a>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font:700 14px 'Sora',sans-serif;margin-bottom:4px">Contact</div>
+          <a href="tel:+33766577638" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">07 66 57 76 38</a>
+          <a href="mailto:rilesiddir.pro@gmail.com" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">rilesiddir.pro@gmail.com</a>
+          <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Prendre rendez-vous</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font:700 14px 'Sora',sans-serif;margin-bottom:4px">Navigation</div>
+          <a href="#avis" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Avis clients</a>
+          <a href="#resultats" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Résultats</a>
+          <a href="#offres" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Offres & tarifs</a>
+        </div>
       </div>
     </div>
-    <div style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div class="footer-bottom" style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
       <div style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">© 2026 Idiril Media. Tous droits réservés.</div>
-      <div style="display:flex;gap:24px">
+      <div class="footer-legal" style="display:flex;gap:24px">
         <a href="#" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Politique de confidentialité</a>
         <a href="#" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Conditions générales d'utilisation</a>
       </div>
     </div>
   </footer>
-
+ 
 </div>
-
-</x-dc>
 </body>
 </html>

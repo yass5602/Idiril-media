@@ -172,14 +172,14 @@
         </div>
       </div>
       <div class="hero-video-wrap" style="width:300px;height:533px;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px oklch(20% 0.03 285 / 0.2);border:8px solid oklch(20% 0.03 285)">
-        <iframe
-          src="https://youtube.com/embed/g5nUHb4zp9A"
-          style="width:100%;height:100%;border:none;display:block"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-          title="Témoignage client Idiril Media — montage vidéo"
-          loading="lazy"
-        ></iframe>
+        <div style="width:100%;height:100%;position:relative;cursor:pointer"
+          onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/g5nUHb4zp9A?autoplay=1\' style=\'width:100%;height:100%;border:none;display:block\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>'">
+          <img src="https://i.ytimg.com/vi/g5nUHb4zp9A/maxresdefault.jpg"
+          style="width:100%;height:100%;object-fit:cover" alt="Témoignage client Idiril Media">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 24 24" style="width:28px;fill:white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
       </div>
     </section>
  

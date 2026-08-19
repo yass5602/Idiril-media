@@ -28,6 +28,7 @@
 <meta name="twitter:description" content="Reels viraux, sous-titres animés, stratégie éditoriale. +1,3M vues pour nos clients médias et créateurs.">
 <meta name="twitter:image" content="https://www.idiril-media.com/assets/logo-fond-blanc.webp">
 
+<!-- Schema ProfessionalService -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +38,7 @@
   "url": "https://www.idiril-media.com/",
   "logo": "https://www.idiril-media.com/assets/idiril-logo.webp",
   "telephone": "+33766577638",
-  "email": "rilesiddir.pro@gmail.com",
+  "email": "contact@idiril-media.com",
   "address": {"@type": "PostalAddress","addressCountry": "FR"},
   "founder": {"@type": "Person","name": "Rilès Iddir"},
   "serviceType": ["Montage vidéo","Stratégie éditoriale","Sous-titres animés","Motion design","Production de contenu réseaux sociaux"],
@@ -48,7 +49,7 @@
 }
 </script>
 
-<!-- ✅ GEO : Schema FAQ pour Google et les IA -->
+<!-- ✅ Schema FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,7 +68,7 @@
       "name": "Est-ce que vous comprenez mon univers éditorial et ma ligne de contenu ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Avant de commencer, on prend le temps d'analyser vos contenus existants, votre audience et vos objectifs. Chaque montage est pensé pour votre ligne éditoriale pas un template copié-collé. C'est cette approche sur mesure qui explique les taux de rétention et d'engagement obtenus chez nos clients."
+        "text": "Avant de commencer, on prend le temps d'analyser vos contenus existants, votre audience et vos objectifs. Chaque montage est pensé pour votre ligne éditoriale, pas un template copié-collé. C'est cette approche sur mesure qui explique les taux de rétention et d'engagement obtenus chez nos clients."
       }
     },
     {
@@ -75,7 +76,7 @@
       "name": "Comment se passe la collaboration au quotidien ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le process est simple et pensé pour vous faire gagner du temps : vous envoyez vos fichiers bruts et un brief (durée cible, points clés à garder, ton souhaité). On monte, on livre, vous validez ou demandez des ajustements."
+        "text": "Le process est simple et pensé pour vous faire gagner du temps : vous envoyez vos fichiers bruts et un brief (durée cible, points clés à garder, ton souhaité). On monte, on livre, vous validez ou demandez des ajustements. Pas de réunion chronophage, pas de friction — uniquement de la livraison."
       }
     },
     {
@@ -83,7 +84,7 @@
       "name": "Quels résultats concrets vos clients ont-ils obtenus ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le Média Positif a atteint 1,3M de vues sur un seul vidéo avec 5,88% d'engagement. Stratégies est passé de 2 à 12,5M de vues en 3 mois sur Instagram. Ces résultats ne sont pas des exceptions ils sont le fruit d'une méthode reproductible."
+        "text": "Le Média Positif a atteint 1,3M de vues sur un seul format avec 5,88% d'engagement. Stratégies Live est passé de zéro à 12,5M de vues en trois mois sur Instagram. Ces résultats ne sont pas des exceptions — ils sont le fruit d'une méthode reproductible."
       }
     },
     {
@@ -91,8 +92,30 @@
       "name": "Est-ce que vous vous occupez uniquement du montage ou aussi de la stratégie de contenu ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les deux, selon votre besoin. L'offre Décollage se concentre sur un montage propre et efficace. L'offre Ascension intègre un travail plus poussé sur le hook et l'ajout de sound design et de motion design pour maximiser la rétention. L'offre Orbite va plus loin avec une stratégie éditoriale complète, des rapports de performance mensuels et une optimisation continue."
+        "text": "Les deux, selon votre besoin. L'offre Décollage se concentre sur un montage propre et efficace. L'offre Ascension intègre en plus le hook visuel, le sound design et le motion design pour maximiser la rétention. L'offre Orbite va plus loin avec une stratégie éditoriale complète, des rapports de performance mensuels et un suivi continu de vos résultats."
       }
+    }
+  ]
+}
+</script>
+
+<!-- ✅ Schema BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.idiril-media.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Montage vidéo pour créateurs & médias",
+      "item": "https://www.idiril-media.com/"
     }
   ]
 }
@@ -166,6 +189,31 @@
   .nav-links { display: flex; align-items: center; gap: 36px; }
   .nav-cta { display: inline-flex; }
 
+  /* ── CTA STICKY MOBILE ── */
+  .sticky-cta-mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    padding: 12px 20px 20px;
+    background: linear-gradient(to top, oklch(98% 0.008 290) 70%, oklch(98% 0.008 290 / 0));
+  }
+  .sticky-cta-mobile a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));
+    color: white;
+    font: 700 16px 'Sora', sans-serif;
+    box-shadow: 0 8px 24px oklch(30% 0.10 275 / 0.35);
+    text-decoration: none;
+  }
+
   /* ── CARROUSEL ── */
   .carousel-wrapper { overflow: hidden; width: 100%; }
   #carousel-track { display: flex; gap: 16px; width: max-content; }
@@ -221,21 +269,13 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background 0.2s, transform 0.3s;
+    transition: background 0.2s;
   }
   .faq-icon svg { width: 14px; height: 14px; stroke: oklch(30% 0.10 275); stroke-width: 2.5; transition: transform 0.3s; }
   .faq-item.open .faq-icon { background: oklch(30% 0.10 275); }
   .faq-item.open .faq-icon svg { stroke: white; transform: rotate(45deg); }
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-  }
-  .faq-answer-inner {
-    font: 500 15px/1.7 'Public Sans', sans-serif;
-    color: oklch(48% 0.02 285);
-    padding-bottom: 24px;
-  }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-answer-inner { font: 500 15px/1.7 'Public Sans', sans-serif; color: oklch(48% 0.02 285); padding-bottom: 24px; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
@@ -243,6 +283,7 @@
     .nav-cta { display: none !important; }
     .burger-btn { display: flex; }
     .nav-wrap { padding: 12px 20px !important; }
+    .sticky-cta-mobile { display: block; }
 
     .hero-section { padding: 100px 20px 60px !important; gap: 36px !important; }
     .hero-text { max-width: 100% !important; }
@@ -276,7 +317,7 @@
     .faq-title { font-size: 22px !important; }
     .faq-question { font-size: 15px !important; }
 
-    .footer-wrap { padding: 48px 20px 28px !important; }
+    .footer-wrap { padding: 48px 20px 100px !important; }
     .footer-inner { flex-direction: column !important; gap: 28px !important; }
     .footer-logo { height: 100px !important; width: 160px !important; }
     .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; padding: 0 !important; }
@@ -296,14 +337,19 @@
 <body>
 <div style="font-family:'Public Sans',sans-serif;color:oklch(22% 0.03 285);background:oklch(98% 0.008 290);overflow-x:hidden">
 
+  <!-- ✅ CTA STICKY MOBILE -->
+  <div class="sticky-cta-mobile" aria-label="Réserver un appel gratuit">
+    <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener">Réserver un appel gratuit</a>
+  </div>
+
   <!-- NAV -->
   <header>
     <nav aria-label="Navigation principale" class="nav-wrap" style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:oklch(98% 0.008 290 / 0.92);backdrop-filter:blur(12px);border-bottom:1px solid oklch(90% 0.012 290)">
-      <a href="#hero" aria-label="Idiril Media — Accueil" style="display:flex;align-items:center">
-        <img src="assets/idiril-logo.webp" alt="Logo Idiril Media — agence montage vidéo" style="height:34px;width:auto;display:block" decoding="async" />
+      <a href="/" aria-label="Idiril Media — Accueil" style="display:flex;align-items:center">
+        <img src="assets/idiril-logo.webp" alt="Logo Idiril Media — agence de montage vidéo pour créateurs et médias" width="120" height="34" style="height:34px;width:auto;display:block" decoding="async" />
       </a>
       <div class="nav-links">
-        <a href="#avis" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Clients</a>
+        <a href="#avis" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Avis clients</a>
         <a href="#resultats" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Résultats</a>
         <a href="#offres" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Offres</a>
         <a href="#faq" style="font:600 15px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">FAQ</a>
@@ -343,10 +389,19 @@
   <!-- HERO -->
   <main>
     <section id="hero" class="hero-section" aria-label="Présentation Idiril Media" style="padding:180px 48px 100px;display:flex;align-items:center;justify-content:center;gap:64px;flex-wrap:wrap;background:radial-gradient(circle at 80% 10%, oklch(90% 0.05 300 / 0.5), transparent 60%)">
+
+      <!-- ✅ FIL D'ARIANE visible -->
+      <nav aria-label="Fil d'Ariane" style="position:absolute;top:90px;left:48px;font:500 12px 'Public Sans',sans-serif;color:oklch(48% 0.02 285);display:flex;gap:6px;align-items:center">
+        <a href="/" style="color:oklch(48% 0.02 285)">Accueil</a>
+        <span aria-hidden="true">›</span>
+        <span style="color:oklch(30% 0.10 275)">Montage vidéo</span>
+      </nav>
+
       <div class="hero-text" style="max-width:560px;display:flex;flex-direction:column;gap:24px">
         <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0">MONTAGE VIDÉO POUR CRÉATEURS & MÉDIAS WEB</p>
         <h1 class="hero-title" style="font:800 48px/1.15 'Sora',sans-serif;margin:0;text-wrap:pretty">Des vidéos qui captent l'attention et font grandir votre audience.</h1>
         <p class="hero-sub" style="font:500 17px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0;text-wrap:pretty">Montage rythmé, sous-titres animés, stratégie éditoriale vidéo : Idiril Media transforme vos contenus bruts en Reels, Shorts et TikToks qui performent sur les réseaux sociaux et font exploser votre audience.</p>
+        <!-- ✅ CTA VISIBLE SANS SCROLLER -->
         <div class="hero-btns" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
           <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;background:linear-gradient(135deg, oklch(64% 0.16 300), oklch(30% 0.10 275));color:white;font:700 16px 'Sora',sans-serif;box-shadow:0 12px 28px oklch(30% 0.10 275 / 0.28)">Réserver un appel stratégique gratuit</a>
           <a href="#resultats" style="display:inline-flex;align-items:center;padding:16px 30px;border-radius:999px;border:1.5px solid oklch(30% 0.10 275);color:oklch(30% 0.10 275);font:700 16px 'Sora',sans-serif">Voir nos résultats clients</a>
@@ -354,10 +409,10 @@
       </div>
       <div class="hero-video-wrap" style="width:300px;height:533px;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px oklch(20% 0.03 285 / 0.2);border:8px solid oklch(20% 0.03 285)">
         <div style="width:100%;height:100%;position:relative;cursor:pointer"
-          onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/g5nUHb4zp9A?autoplay=1\' style=\'width:100%;height:100%;border:none;display:block\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>'">
-          <img src="https://i.ytimg.com/vi/g5nUHb4zp9A/maxresdefault.jpg" style="width:100%;height:100%;object-fit:cover" alt="Témoignage client Idiril Media — montage vidéo">
-          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center">
-            <svg viewBox="0 0 24 24" style="width:28px;fill:white"><path d="M8 5v14l11-7z"/></svg>
+          onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/g5nUHb4zp9A?autoplay=1\' style=\'width:100%;height:100%;border:none;display:block\' allow=\'autoplay;fullscreen\' allowfullscreen title=\'Témoignage client Idiril Media — montage vidéo\'></iframe>'">
+          <img src="https://i.ytimg.com/vi/g5nUHb4zp9A/maxresdefault.jpg" style="width:100%;height:100%;object-fit:cover" alt="Témoignage vidéo d'un client Idiril Media — résultats montage vidéo" width="284" height="517">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center" aria-label="Lire la vidéo">
+            <svg viewBox="0 0 24 24" style="width:28px;fill:white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </div>
         </div>
       </div>
@@ -379,31 +434,31 @@
       <div class="carousel-wrapper">
         <div id="carousel-track">
           <article class="client-card">
-            <div class="avatar"><img src="assets/client/New/le-mediapositif copy-1.webp" alt="Logo Le Média Positif" loading="lazy" decoding="async"></div>
+            <div class="avatar"><img src="assets/client/New/le-mediapositif copy-1.webp" alt="Logo Le Média Positif" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Le Média Positif</div>
           </article>
           <article class="client-card">
-            <div class="avatar"><img src="assets/client/New/whoswho_upscaled-1.webp" alt="Logo Who's Who France" loading="lazy" decoding="async"></div>
+            <div class="avatar"><img src="assets/client/New/whoswho_upscaled-1.webp" alt="Logo Who's Who France" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Who's Who France</div>
           </article>
           <article class="client-card">
-            <div class="avatar"><img src="assets/client/New/strategies_logo_upscaled-1.png" alt="Logo Stratégies Live" loading="lazy" decoding="async"></div>
-            <div class="client-name">Stratégies</div>
+            <div class="avatar"><img src="assets/client/New/strategies_logo_upscaled-1.png" alt="Logo Stratégies Live" loading="lazy" decoding="async" width="60" height="60"></div>
+            <div class="client-name">Stratégies Live</div>
           </article>
           <article class="client-card">
-            <div class="avatar"><img src="assets/client/New/lemediaexperience-1.webp" alt="Logo Le Média Expérience" loading="lazy" decoding="async"></div>
+            <div class="avatar"><img src="assets/client/New/lemediaexperience-1.webp" alt="Logo Le Média Expérience" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Le Média Expérience</div>
           </article>
           <article class="client-card">
-            <div class="avatar" style="background:oklch(30% 0.01 285)"><img src="assets/client/New/christopher-wangen.jpg" alt="Photo Christopher Wangen — infopreneur" loading="lazy" decoding="async"></div>
+            <div class="avatar" style="background:oklch(30% 0.01 285)"><img src="assets/client/New/christopher-wangen.jpg" alt="Photo de Christopher Wangen, infopreneur et client Idiril Media" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Christopher Wangen</div>
           </article>
           <article class="client-card">
-            <div class="avatar"><img src="assets/client/New/Logo_Maddyness.png" alt="Logo Maddyness" loading="lazy" decoding="async"></div>
+            <div class="avatar"><img src="assets/client/New/Logo_Maddyness.png" alt="Logo Maddyness" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Maddyness</div>
           </article>
           <article class="client-card">
-            <div class="avatar" style="background:oklch(88% 0.16 95)"><img src="assets/client/New/authenticcreators-upscale-1.webp" alt="Logo Authentic Creators" loading="lazy" decoding="async"></div>
+            <div class="avatar" style="background:oklch(88% 0.16 95)"><img src="assets/client/New/authenticcreators-upscale-1.webp" alt="Logo Authentic Creators" loading="lazy" decoding="async" width="60" height="60"></div>
             <div class="client-name">Authentic Creators</div>
           </article>
         </div>
@@ -458,7 +513,7 @@
         <div class="resultats-card" style="background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;padding:32px;width:380px">
           <h3 style="font:700 16px 'Sora',sans-serif;margin:0 0 4px">Total des vues / mois</h3>
           <p style="font:500 12px 'Public Sans',sans-serif;color:oklch(45% 0.13 300);margin:0 0 20px">@strategieslive</p>
-          <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center">
+          <div style="display:flex;align-items:flex-end;gap:28px;height:160px;justify-content:center" role="img" aria-label="Graphique : 2M vues en octobre, 7M en novembre, 12,5M en décembre">
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
               <div style="font:700 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">2M</div>
               <div style="width:56px;height:26px;border-radius:8px 8px 0 0;background:linear-gradient(180deg, oklch(64% 0.16 300), oklch(30% 0.10 275))"></div>
@@ -483,7 +538,7 @@
       <div style="max-width:1180px;margin:0 auto">
         <div class="client-block" style="display:flex;align-items:center;gap:16px;margin-bottom:32px">
           <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center;border:1px solid oklch(90% 0.012 290)">
-            <img src="assets/client/New/le-mediapositif copy-1.webp" alt="Logo Le Média Positif" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain">
+            <img src="assets/client/New/le-mediapositif copy-1.webp" alt="Logo Le Média Positif — client Idiril Media" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" width="52" height="52">
           </div>
           <div>
             <h3 style="font:700 20px 'Sora',sans-serif;margin:0 0 4px">Le Média Positif — Groupe</h3>
@@ -492,7 +547,7 @@
         </div>
         <div class="reels-grid" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DOJjz2HCGPA/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Positif — 1,3M vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DOJjz2HCGPA/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Positif — 1,3M vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">1,3M</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,88%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
@@ -500,7 +555,7 @@
             </div>
           </div>
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DPCDjpPDj6-/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Expérience — 340k vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DPCDjpPDj6-/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Le Média Expérience — 340k vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">340k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">4,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
@@ -508,7 +563,7 @@
             </div>
           </div>
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQhXT3hiFKW/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Who's Who France — 42k vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQhXT3hiFKW/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Who's Who France — 42k vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">42,3k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">5,4%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
@@ -522,7 +577,7 @@
       <div style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:64px">
         <div class="client-block" style="display:flex;align-items:center;gap:16px;margin-bottom:32px">
           <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;background:white;display:flex;align-items:center;justify-content:center;border:1px solid oklch(90% 0.012 290)">
-            <img src="assets/client/New/strategies_logo_upscaled-1.png" alt="Logo Stratégies Live" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain">
+            <img src="assets/client/New/strategies_logo_upscaled-1.png" alt="Logo Stratégies Live — client Idiril Media" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" width="52" height="52">
           </div>
           <div>
             <h3 style="font:700 20px 'Sora',sans-serif;margin:0 0 4px">@strategieslive</h3>
@@ -531,7 +586,7 @@
         </div>
         <div class="reels-grid" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQ6bPNgAU8m/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 184k vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQ6bPNgAU8m/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 184k vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">184k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,71%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
@@ -539,7 +594,7 @@
             </div>
           </div>
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DSK1m6NjTVm/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 612k vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DSK1m6NjTVm/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 612k vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">612k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">65%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">rétention</div></div>
@@ -547,7 +602,7 @@
             </div>
           </div>
           <div class="reel-card" style="width:320px;background:oklch(99% 0.004 290);border:1px solid oklch(90% 0.012 290);border-radius:20px;overflow:hidden">
-            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQmapRRiJzJ/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 110k vues"></iframe></div>
+            <div style="width:100%;aspect-ratio:9/14;overflow:hidden"><iframe src="https://www.instagram.com/reel/DQmapRRiJzJ/embed" style="width:100%;height:100%;border:0" loading="lazy" title="Reel Stratégies Live — 110k vues, montage Idiril Media"></iframe></div>
             <div style="display:flex;justify-content:space-around;padding:16px;border-top:1px solid oklch(90% 0.012 290)">
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">110k</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">vues</div></div>
               <div style="text-align:center"><div style="font:700 16px 'Sora',sans-serif;color:oklch(30% 0.10 275)">2,2%</div><div style="font:500 11px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">engagement</div></div>
@@ -565,7 +620,7 @@
     </div>
 
     <!-- OFFRES -->
-    <section id="offres" class="offres-section" aria-label="Offres et tarifs" style="padding:100px 48px;background:oklch(98% 0.008 290)">
+    <section id="offres" class="offres-section" aria-label="Offres et tarifs de montage vidéo" style="padding:100px 48px;background:oklch(98% 0.008 290)">
       <div style="text-align:center;max-width:640px;margin:0 auto 64px">
         <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0 0 12px">OFFRES & TARIFS</p>
         <h2 class="offres-title" style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Une formule de montage vidéo pour chaque étape de votre croissance</h2>
@@ -603,7 +658,7 @@
             <div style="font:800 20px 'Sora',sans-serif;color:oklch(30% 0.10 275)">À partir de 130€<span style="font:500 14px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">/vidéo</span></div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">
               <span style="font:500 12px 'Public Sans',sans-serif;background:white;border:1px solid oklch(90% 0.012 290);border-radius:999px;padding:3px 10px">Dès 8 vidéos</span>
-              <span style="font:500 12px 'Public Sans',sans-serif;background:white;border:1px solid oklch(90% 0.012 290);border-radius:999px;padding:3px 10px">3 formats</span>
+              <span style="font:500 12px 'Public Sans',sans-serif;background:white;border:1px solid oklch(90% 0.012 290);border-radius:999px;padding:3px 10px">3 formats + miniature</span>
               <span style="font:500 12px 'Public Sans',sans-serif;background:white;border:1px solid oklch(90% 0.012 290);border-radius:999px;padding:3px 10px">Livraison 48h</span>
             </div>
           </div>
@@ -655,75 +710,48 @@
     </div>
 
     <!-- FAQ -->
-    <section id="faq" class="faq-section" aria-label="Questions fréquentes" style="padding:100px 48px;background:oklch(98% 0.008 290)">
+    <section id="faq" class="faq-section" aria-label="Questions fréquentes sur le montage vidéo" style="padding:100px 48px;background:oklch(98% 0.008 290)">
       <div style="max-width:760px;margin:0 auto">
         <div style="text-align:center;margin-bottom:64px">
           <p style="font:700 13px 'Sora',sans-serif;letter-spacing:0.14em;color:oklch(45% 0.13 300);margin:0 0 12px">FAQ</p>
           <h2 class="faq-title" style="font:800 34px/1.2 'Sora',sans-serif;margin:0;text-wrap:pretty">Les questions qu'on nous pose avant de signer</h2>
         </div>
-
         <div class="faq-list">
-
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-question">Combien de temps faut-il pour recevoir ma vidéo montée ?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
-              </span>
+              <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span>
             </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Les délais varient selon l'offre choisie : 72h pour l'offre Décollage, 48h pour l'offre Ascension, et 24h pour l'offre Orbite. Ces délais courent dès réception de vos fichiers bruts et du brief. Chaque livraison inclut un tour de révisions pour affiner le résultat.</div>
-            </div>
+            <div class="faq-answer" role="region"><div class="faq-answer-inner">Les délais varient selon l'offre choisie : 72h pour l'offre Décollage, 48h pour l'offre Ascension, et 24h pour l'offre Orbite. Ces délais courent dès réception de vos fichiers bruts et du brief. Chaque livraison inclut un tour de révisions pour affiner le résultat.</div></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-question">Est-ce que vous comprenez mon univers éditorial et ma ligne de contenu ?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
-              </span>
+              <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span>
             </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Avant de commencer, on prend le temps d'analyser vos contenus existants, votre audience et vos objectifs. Chaque montage est pensé pour votre ligne éditoriale pas un template copié-collé. C'est cette approche sur mesure qui explique les taux de rétention et d'engagement obtenus chez nos clients.</div>
-            </div>
+            <div class="faq-answer" role="region"><div class="faq-answer-inner">Avant de commencer, on prend le temps d'analyser vos contenus existants, votre audience et vos objectifs. Chaque montage est pensé pour votre ligne éditoriale — pas un template copié-collé. C'est cette approche sur mesure qui explique les taux de rétention et d'engagement obtenus chez nos clients.</div></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-question">Comment se passe la collaboration au quotidien ?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
-              </span>
+              <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span>
             </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Le process est simple et pensé pour vous faire gagner du temps : vous envoyez vos fichiers bruts et un brief (durée cible, points clés à garder, ton souhaité). On monte, on livre, vous validez ou demandez des ajustements. Pas de réunion chronophage, pas de friction uniquement de la livraison.</div>
-            </div>
+            <div class="faq-answer" role="region"><div class="faq-answer-inner">Le process est simple et pensé pour vous faire gagner du temps : vous envoyez vos fichiers bruts et un brief (durée cible, points clés à garder, ton souhaité). On monte, on livre, vous validez ou demandez des ajustements. Pas de réunion chronophage, pas de friction — uniquement de la livraison.</div></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-question">Quels résultats concrets vos clients ont-ils obtenus ?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
-              </span>
+              <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span>
             </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Le Média Positif a atteint 1,3M de vues sur un seul format avec 5,88% d'engagement. Stratégies est passé de zéro à 12,5M de vues en trois mois sur Instagram. Ces résultats ne sont pas des exceptions  ils sont le fruit d'une méthode reproductible.</div>
-            </div>
+            <div class="faq-answer" role="region"><div class="faq-answer-inner">Le Média Positif a atteint 1,3M de vues sur un seul format avec 5,88% d'engagement. Stratégies Live est passé de zéro à 12,5M de vues en trois mois sur Instagram. Ces résultats ne sont pas des exceptions — ils sont le fruit d'une méthode reproductible.</div></div>
           </div>
-
           <div class="faq-item" style="border-bottom:none">
             <button class="faq-btn" aria-expanded="false">
               <span class="faq-question">Est-ce que vous vous occupez uniquement du montage ou aussi de la stratégie de contenu ?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
-              </span>
+              <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></span>
             </button>
-            <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Les deux, selon votre besoin. L'offre Décollage se concentre sur un montage propre et efficace. L'offre Ascension intègre en plus le hook visuel, le sound design et le motion design pour maximiser la rétention. L'offre Orbite va plus loin avec une stratégie éditoriale complète, des rapports de performance mensuels et un suivi continu de vos résultats.</div>
-            </div>
+            <div class="faq-answer" role="region"><div class="faq-answer-inner">Les deux, selon votre besoin. L'offre Décollage se concentre sur un montage propre et efficace. L'offre Ascension intègre en plus le hook visuel, le sound design et le motion design pour maximiser la rétention. L'offre Orbite va plus loin avec une stratégie éditoriale complète, des rapports de performance mensuels et un suivi continu de vos résultats.</div></div>
           </div>
-
         </div>
       </div>
     </section>
@@ -734,15 +762,11 @@
           var item = btn.closest('.faq-item');
           var answer = item.querySelector('.faq-answer');
           var isOpen = item.classList.contains('open');
-
-          // Ferme tous les autres
           document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
             openItem.classList.remove('open');
             openItem.querySelector('.faq-answer').style.maxHeight = '0';
             openItem.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
           });
-
-          // Ouvre celui-ci si ce n'était pas lui
           if (!isOpen) {
             item.classList.add('open');
             answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -759,13 +783,13 @@
     <div style="max-width:1180px;margin:0 auto;padding-bottom:48px">
       <div class="footer-inner" style="display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap">
         <div style="max-width:320px;display:flex;flex-direction:column;gap:16px">
-          <img class="footer-logo" src="assets/idiril-logo.webp" alt="Logo Idiril Media — agence montage vidéo pour créateurs et médias" style="height:200px;width:300px;object-fit:contain" loading="lazy" decoding="async" />
+          <img class="footer-logo" src="assets/logo-fond-blanc.webp" alt="Logo Idiril Media — agence montage vidéo pour créateurs et médias" style="height:200px;width:300px;object-fit:contain" loading="lazy" decoding="async" width="300" height="200" />
           <p style="font:500 14px/1.6 'Public Sans',sans-serif;color:oklch(48% 0.02 285);margin:0">Montage vidéo pour créateurs de contenu, infopreneurs et médias web qui veulent des formats qui performent sur les réseaux sociaux.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px">
           <div style="font:700 14px 'Sora',sans-serif;margin-bottom:4px">Contact</div>
           <a href="tel:+33766577638" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">07 66 57 76 38</a>
-          <a href="mailto:rilesiddir.pro@gmail.com" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">contact@idiril-media.com</a>
+          <a href="mailto:contact@idiril-media.com" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">contact@idiril-media.com</a>
           <a href="https://calendly.com/rilesiddir-pro" target="_blank" rel="noopener" style="font:500 14px 'Public Sans',sans-serif;color:oklch(22% 0.03 285)">Prendre rendez-vous</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px">
@@ -780,8 +804,8 @@
     <div class="footer-bottom" style="max-width:1180px;margin:0 auto;border-top:1px solid oklch(90% 0.012 290);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
       <div style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">© 2026 Idiril Media. Tous droits réservés.</div>
       <div class="footer-legal" style="display:flex;gap:24px">
-        <a href="#" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Politique de confidentialité</a>
-        <a href="#" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Conditions générales d'utilisation</a>
+        <a href="/confidentialite.html" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Politique de confidentialité</a>
+        <a href="/confidentialite.html#cgu" style="font:500 13px 'Public Sans',sans-serif;color:oklch(48% 0.02 285)">Conditions générales d'utilisation</a>
       </div>
     </div>
   </footer>
